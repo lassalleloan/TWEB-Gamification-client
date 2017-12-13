@@ -1,2 +1,3 @@
 # TWEB-Gamification-client
-Angular client for gamification
+Authors: Tano Iannetta & Loan Lassalle
+***
