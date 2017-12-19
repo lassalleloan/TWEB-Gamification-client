@@ -31,7 +31,12 @@ module.exports = function (config) {
 			'app/modules/home/homeCtrl.js',
 			'app/modules/home/homeRoute.js',
 			'app/modules/home/homeService.js',
-			'app/modules/home/home-test.js'
+			'app/modules/home/home-test.js',
+			'app/modules/leaderboard/leaderboardModule.js',
+			'app/modules/leaderboard/leaderboardCtrl.js',
+			'app/modules/leaderboard/leaderboardRoute.js',
+			'app/modules/leaderboard/leaderboardService.js',
+			'app/modules/leaderboard/leaderboard-test.js',
 		],
 
 		// Test results reporter to use

@@ -3,12 +3,12 @@
 
 	/**
 	 * @ngdoc function
-	 * @name app.module:homeModule
+	 * @name app.module:leaderboardModule
 	 * @description
-	 * # homeModule
+	 * # leaderboardModule
 	 * Module of the app
 	 */
 
-	angular.module('home', []);
-	
+  	angular.module('leaderboard', []);
+
 })();

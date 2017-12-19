@@ -1,15 +1,15 @@
 'use strict';
 
-	/**
-	* @ngdoc function
-	* @name app.route:HomeRoute
-	* @description
-	* # HomeRoute
-	* Route of the app
-	*/
+/**
+ * @ngdoc function
+ * @name app.route:HomeRoute
+ * @description
+ * # HomeRoute
+ * Route of the app
+ */
 
 angular.module('gamification-client')
-	.config(['$stateProvider', function ($stateProvider) {
+	.config(['$stateProvider', function($stateProvider) {
 		$stateProvider
 			
 			.state('home', {

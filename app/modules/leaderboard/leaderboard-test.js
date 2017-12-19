@@ -3,13 +3,13 @@
 
 	/**
 	 * @ngdoc function
-	 * @name app.test:homeTest
+	 * @name app.test:leaderboardTest
 	 * @description
-	 * # homeTest
+	 * # leaderboardTest
 	 * Test of the app
 	 */
 
-	describe('homeCtrl', function() {
+	describe('leaderboardCtrl', function() {
 		var controller = null, $scope = null, $location;
 
 		beforeEach(function () {
@@ -20,18 +20,18 @@
 			$scope = $rootScope.$new();
 			$location = _$location_;
 
-			controller = $controller('HomeCtrl', {
+			controller = $controller('LeaderboardCtrl', {
 				$scope: $scope
 			});
 		}));
 
-		it('Should HomeCtrl must be defined', function() {
+		it('Should LeaderboardCtrl must be defined', function() {
 			expect(controller).toBeDefined();
 		});
 
 		it('Should match the path Module name', function() {
-			$location.path('/home');
-			expect($location.path()).toBe('/home');
+			$location.path('/leaderboard');
+			expect($location.path()).toBe('/leaderboard');
 		});
 
 	});
