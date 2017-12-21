@@ -12,7 +12,7 @@
   	angular.module('leaderboard')
 		.controller('LeaderboardCtrl', Leaderboard);
 
-	Leaderboard.$inject = ['leaderboardService'];
+	Leaderboard.$inject = ['$scope', 'leaderboardService'];
 
 	/**
 	 * recommend
@@ -20,14 +20,19 @@
 	 * and bindable members up top.
 	 */
 
-	function Leaderboard(leaderboardService) {
+	function Leaderboard($scope, leaderboardService) {
 		/*jshint validthis: true */
 		let vm = this;
 
 		vm.title = "Leaderboard";
-		vm.userList = leaderboardService.getUserList();
 		vm.sortColumn = 'recent';
 		vm.sortDescending = true;
+		
+		leaderboardService.getUserList()
+			.then((userList) => {
+				vm.userList = userList;
+				$scope.$apply();
+			});
 
 		vm.sortBy = function(column) {
 			vm.sortDescending = vm.sortColumn === column ? !vm.sortDescending : false;

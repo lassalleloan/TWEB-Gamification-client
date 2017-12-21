@@ -22,17 +22,18 @@
 
 		return {
 			getUserList: function() {
-				let requestTimeBefore = new Date().getTime();
+				return new Promise((resolve) => {
+					let requestTimeBefore = new Date().getTime();
 
-				if (userList.length === 0 || requestTimeBefore - requestTimeAfter >= reloadTime) {
-					$http.get("https://fcctop100.herokuapp.com/api/fccusers/top/recent")
-						.then(function (response) {
-							userList = response.data;
-							requestTimeAfter = new Date().getTime();
-						});
-				}
-
-				return userList;
+					if (userList.length === 0 || requestTimeBefore - requestTimeAfter >= reloadTime) {
+						$http.get("https://fcctop100.herokuapp.com/api/fccusers/top/recent")
+							.then(function(response) {
+								userList = response.data;
+								requestTimeAfter = new Date().getTime();
+								resolve(userList);
+							});
+					}
+				});
 			}
 		}
 	}

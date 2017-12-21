@@ -19,7 +19,6 @@
 		'ngMessages',
 		'ngCookies',
 		'ngAnimate',
-		'ngTouch',
 		'ngSanitize',
 		'ui.router',
 		'home',
