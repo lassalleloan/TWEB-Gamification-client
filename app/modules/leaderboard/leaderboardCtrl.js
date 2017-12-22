@@ -3,9 +3,9 @@
 
 	/**
 	 * @ngdoc function
-	 * @name app.controller:LeaderboardCtrl
+	 * @name app.controller:leaderboardCtrl
 	 * @description
-	 * # LeaderboardCtrl
+	 * # leaderboardCtrl
 	 * Controller of the app
 	 */
 

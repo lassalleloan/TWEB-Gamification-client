@@ -2,27 +2,28 @@
 	'use strict';
 
 	/**
- 	 * @ngdoc index
- 	 * @name app
- 	 * @description
+	 * @ngdoc index
+	 * @name app
+	 * @description
 	 * # app
 	 *
-	 * Main module of the application.
+	 * Main modules of the application.
 	 */
 
 	angular.module('gamification-client', [
 		'ngResource',
 		'ngAria',
-		'ui.bootstrap',
-		'ngMaterial',
+		 'ui.bootstrap',
+		 'ngMaterial',
 		'ngMdIcons',
-		'ngMessages',
 		'ngCookies',
 		'ngAnimate',
+		'ngTouch',
 		'ngSanitize',
 		'ui.router',
 		'home',
 		'leaderboard',
+		'authentication',
 	]);
 
 })();

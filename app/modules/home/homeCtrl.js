@@ -3,9 +3,9 @@
 
 	/**
 	 * @ngdoc function
-	 * @name app.controller:HomeCtrl
+	 * @name app.controller:homeCtrl
 	 * @description
-	 * # HomeCtrl
+	 * # homeCtrl
 	 * Controller of the app
 	 */
 
