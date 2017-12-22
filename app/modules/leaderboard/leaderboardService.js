@@ -9,7 +9,7 @@
 	 * Service of the app
 	 */
 
-  	angular.module('leaderboard')
+    angular.module('leaderboard')
 		.factory('leaderboardService', leaderboardService);
 
 	leaderboardService.$inject = ['$http'];
@@ -32,10 +32,12 @@
 								requestTimeAfter = new Date().getTime();
 								resolve(userList);
 							});
+					} else {
+						resolve(userList);
 					}
 				});
 			}
-		}
+		};
 	}
 
 })();

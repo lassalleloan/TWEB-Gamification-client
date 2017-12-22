@@ -9,7 +9,7 @@
 	 * Controller of the app
 	 */
 
-  	angular.module('leaderboard')
+    angular.module('leaderboard')
 		.controller('LeaderboardCtrl', Leaderboard);
 
 	Leaderboard.$inject = ['$scope', 'leaderboardService'];
@@ -37,12 +37,12 @@
 		vm.sortBy = function(column) {
 			vm.sortDescending = vm.sortColumn === column ? !vm.sortDescending : false;
 			vm.sortColumn = column;
-		}
+        };
 
 		vm.getSortClass = function(column) {
 			return vm.sortColumn === column ? 
 				(vm.sortDescending ? 'fa fa-caret-up' : 'fa fa-caret-down') : '';
-		}
+		};
 
 	}
 

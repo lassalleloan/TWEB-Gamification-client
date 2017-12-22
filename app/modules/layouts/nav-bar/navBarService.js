@@ -9,7 +9,7 @@
 	 * Service of the app
 	 */
 
-  	angular
+    angular
 		.module('gamification-client')
 		.factory('MenuService', Menu);
 		// Inject your dependencies as .$inject = ['$http', 'someSevide'];
@@ -26,13 +26,13 @@
 							name: 'Leaderboard'
 					},
 			    
-		  	];
+            ];
 
 			return {
 				listMenu: function () {
 					return menu;
 				}
-		  	}
+            };
 
 		}
 
