@@ -1,4 +1,4 @@
-(function() {
+(function () {
 	'use strict';
 
 	/**
@@ -21,16 +21,15 @@
 	 */
 
 	function Leaderboard($scope, leaderboardService) {
-		/*jshint validthis: true */
-		let vm = this;
+		const vm = this;
 
 		vm.title = "Leaderboard";
 		vm.sortColumn = 'recent';
 		vm.sortDescending = true;
 		
-		leaderboardService.getUserList()
-			.then((userList) => {
-				vm.userList = userList;
+		leaderboardService.listUser()
+			.then((listUser) => {
+				vm.users = listUser;
 				$scope.$apply();
 			});
 
@@ -43,7 +42,5 @@
 			return vm.sortColumn === column ? 
 				(vm.sortDescending ? 'fa-caret-up' : 'fa-caret-down') : '';
 		};
-
 	}
-
 })();

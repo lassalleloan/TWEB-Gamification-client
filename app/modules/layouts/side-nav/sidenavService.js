@@ -1,4 +1,4 @@
-(function() {
+(function () {
 	'use strict';
 
 	/**
@@ -9,35 +9,24 @@
 	 * Service of the app
 	 */
 
-    angular.module('gamification-client')
+  	angular.module('gamification-client')
 		.factory('MenuService', Menu);
-		// Inject your dependencies as .$inject = ['$http', 'someSevide'];
-		// function Name ($http, someSevide) {...}
 
-		Menu.$inject = ['$http'];
+	Menu.$inject = ['$http'];
 
-		function Menu ($http) {
+	function Menu ($http) {
 
-			var menu = [
-				
-					{
-						link: 'leaderboard',
-							name: 'Leaderboard'
-					},
-			    
-					{
-						link: 'authentication',
-							name: 'Authentication'
-					},
-			    
-            ];
+		const menu = [
+			{
+				link: 'login',
+				name: 'Login'
+			},
+		];
 
-			return {
-				listMenu: function () {
-					return menu;
-				}
-            };
-
+		return {
+			listMenu: function () {
+				return menu;
+			},
 		}
-
+	}
 })();

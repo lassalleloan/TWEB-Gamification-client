@@ -3,35 +3,35 @@
 
 	/**
 	 * @ngdoc function
-	 * @name app.test:leaderboardTest
+	 * @name app.test:loginTest
 	 * @description
-	 * # leaderboardTest
+	 * # loginTest
 	 * Test of the app
 	 */
 
-	describe('leaderboardCtrl', function () {
+	describe('loginCtrl', function () {
 		let controller = null, $scope = null, $location;
 
 		beforeEach(function () {
-			module('leaderboard');
+			module('login');
 		});
 
 		beforeEach(inject(function($controller, $rootScope, _$location_) {
 			$scope = $rootScope.$new();
 			$location = _$location_;
 
-			controller = $controller('LeaderboardCtrl', {
+			controller = $controller('LoginCtrl', {
 				$scope: $scope
 			});
 		}));
 
-		it('Should LeaderboardCtrl must be defined', function () {
+		it('Should LoginCtrl must be defined', function () {
 			expect(controller).toBeDefined();
 		});
 
 		it('Should match the path Module name', function () {
-			$location.path('/leaderboard');
-			expect($location.path()).toBe('/leaderboard');
+			$location.path('/login');
+			expect($location.path()).toBe('/login');
 		});
 	});
 })();

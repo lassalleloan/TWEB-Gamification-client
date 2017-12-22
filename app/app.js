@@ -13,17 +13,18 @@
 	angular.module('gamification-client', [
 		'ngResource',
 		'ngAria',
-		 'ui.bootstrap',
-		 'ngMaterial',
+		'ui.bootstrap',
+		'ngMaterial',
 		'ngMdIcons',
 		'ngCookies',
 		'ngAnimate',
-		'ngTouch',
 		'ngSanitize',
 		'ui.router',
 		'home',
 		'leaderboard',
 		'authentication',
+		'login',
+		'register',
 	]);
 
 })();

@@ -1,4 +1,4 @@
-(function() {
+(function () {
 	'use strict';
 
 	/**
@@ -21,7 +21,7 @@
 		let lastLoading = 0;
 
 		return {
-			getUserList: function() {
+			listUser: function () {
 				return new Promise((resolve) => {
 					let loading = new Date().getTime();
 
@@ -36,8 +36,7 @@
 						resolve(userList);
 					}
 				});
-			}
+			},
 		};
 	}
-
 })();

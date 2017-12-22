@@ -3,12 +3,11 @@
 
 	/**
 	 * @ngdoc function
-	 * @name app.module:leaderboardModule
+	 * @name app.module:registerModule
 	 * @description
-	 * # leaderboardModule
+	 * # registerModule
 	 * Module of the app
 	 */
 
-    angular.module('leaderboard', []);
-
+  	angular.module('register', []);
 })();

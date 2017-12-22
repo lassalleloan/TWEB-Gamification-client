@@ -1,4 +1,4 @@
-(function() {
+(function () {
 	'use strict';
 
 	/**
@@ -9,11 +9,11 @@
 	 * Test of the app
 	 */
 
-	describe('authenticationCtrl', function() {
-		var controller = null, $scope = null, $location;
+	describe('authenticationCtrl', function () {
+		let controller = null, $scope = null, $location;
 
 		beforeEach(function () {
-			module('gamification-client');
+			module('authentication');
 		});
 
 		beforeEach(inject(function($controller, $rootScope, _$location_) {
@@ -25,14 +25,13 @@
 			});
 		}));
 
-		it('Should AuthenticationCtrl must be defined', function() {
+		it('Should AuthenticationCtrl must be defined', function () {
 			expect(controller).toBeDefined();
 		});
 
-		it('Should match the path Module name', function() {
+		it('Should match the path Module name', function () {
 			$location.path('/authentication');
 			expect($location.path()).toBe('/authentication');
 		});
-
 	});
 })();

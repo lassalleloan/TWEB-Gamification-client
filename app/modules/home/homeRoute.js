@@ -2,16 +2,16 @@
 
 /**
  * @ngdoc function
- * @name app.route:HomeRoute
+ * @name app.route:homeRoute
  * @description
- * # HomeRoute
+ * # homeRoute
  * Route of the app
  */
 
 angular.module('gamification-client')
-	.config(['$stateProvider', function($stateProvider) {
+	.config(['$stateProvider', function ($stateProvider) {
 		$stateProvider
-			
+
 			.state('home', {
 				url: '',
 				abstract: true,
@@ -22,6 +22,5 @@ angular.module('gamification-client')
 			.state('home.dashboard', {
 				url:'/dashboard',
 				templateUrl: 'app/modules/home/dashboard.html'
-			});
-			
+			});	
 	}]);

@@ -1,4 +1,4 @@
-(function() {
+(function () {
 	'use strict';
 
 	/**
@@ -21,8 +21,7 @@
 	 */
 
 	function Authentication(authenticationService) {
-		/*jshint validthis: true */
-		let vm = this;
+		const vm = this;
 
 		vm.title = "Authentication";
 	}

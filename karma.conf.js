@@ -42,6 +42,16 @@ module.exports = function (config) {
 			'app/modules/authentication/authenticationRoute.js',
 			'app/modules/authentication/authenticationService.js',
 			'app/modules/authentication/authentication-test.js',
+			'app/modules/login/loginModule.js',
+			'app/modules/login/loginCtrl.js',
+			'app/modules/login/loginRoute.js',
+			'app/modules/login/loginService.js',
+			'app/modules/login/login-test.js',
+			'app/modules/register/registerModule.js',
+			'app/modules/register/registerCtrl.js',
+			'app/modules/register/registerRoute.js',
+			'app/modules/register/registerService.js',
+			'app/modules/register/register-test.js',
 		],
 
 		// Test results reporter to use

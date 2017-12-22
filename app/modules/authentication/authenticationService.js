@@ -1,4 +1,4 @@
-(function() {
+(function () {
 	'use strict';
 
 	/**
@@ -12,12 +12,47 @@
     angular.module('authentication')
 		.factory('authenticationService', authenticationService);
 
-	authenticationService.$inject = ['$http'];
+	authenticationService.$inject = ['$http', 'User'];
 
-	function authenticationService($http) {
+	function authenticationService($http, User) {
 
-		return {
-		};
+        var service = {
+            login: login,
+            logout: logout,
+            register: register,
+            isAuthenticated: isAuthenticated,
+            getCurrentUser: getCurrentUser
+        };
+        return service;
+
+        function login(email, password) {
+            return User
+                .login({ email: email, password: password })
+                .$promise;
+        }
+
+        function logout() {
+            return User
+                .logout()
+                .$promise;
+        }
+
+        function register(email, password) {
+            return User
+                .create({
+                    email: email,
+                    password: password
+                })
+                .$promise;
+        }
+
+        function isAuthenticated() {
+            return User.isAuthenticated();
+        }
+
+        function getCurrentUser() {
+            return User.getCurrent();
+        }
 
 	}
 

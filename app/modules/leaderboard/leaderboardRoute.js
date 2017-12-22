@@ -18,5 +18,4 @@ angular.module('leaderboard')
 				controller: 'LeaderboardCtrl',
 				controllerAs: 'vm'
 			});
-
 	}]);
