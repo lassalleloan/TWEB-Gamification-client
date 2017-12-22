@@ -22,7 +22,7 @@
 
 	function Authentication(authenticationService) {
 		/*jshint validthis: true */
-		var vm = this;
+		let vm = this;
 
 		vm.title = "Authentication";
 	}

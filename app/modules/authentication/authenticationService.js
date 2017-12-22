@@ -12,10 +12,13 @@
     angular.module('authentication')
 		.factory('authenticationService', authenticationService);
 
-		Authentication.$inject = ['$http'];
+	authenticationService.$inject = ['$http'];
 
-		function Authentication ($http) {
+	function authenticationService($http) {
 
-		}
+		return {
+		};
+
+	}
 
 })();
