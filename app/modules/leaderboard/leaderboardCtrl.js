@@ -41,7 +41,7 @@
 
 		vm.getSortClass = function(column) {
 			return vm.sortColumn === column ? 
-				(vm.sortDescending ? 'fa fa-caret-up' : 'fa fa-caret-down') : '';
+				(vm.sortDescending ? 'fa-caret-up' : 'fa-caret-down') : '';
 		};
 
 	}
