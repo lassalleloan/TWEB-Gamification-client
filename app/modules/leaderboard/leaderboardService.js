@@ -27,16 +27,41 @@
 				return new Promise((resolve) => {
 					let loading = new Date().getTime();
 
-					if (userList.length === 0 || loading - lastLoading >= reloadTime) {
-						$http.get("https://fcctop100.herokuapp.com/api/fccusers/top/recent")
-							.success(function(response) {
-								userList = response.data;
-								lastLoading = new Date().getTime();
-								resolve(userList);
-							});
-					} else {
-						resolve(userList);
-					}
+					// TODO: Delete after tests
+					userList = [
+						{
+							username: 'Galahad',
+							recent: 34,
+							alltime: 2094,
+						},
+						{
+							username: 'AvendoBlack',
+							recent: 54,
+							alltime: 6324,
+						},
+						{
+							username: 'Grem',
+							recent: 94,
+							alltime: 1203,
+						},
+						{
+							username: 'CoolPolishGuy',
+							recent: 342,
+							alltime: 958,
+						}
+					];
+					resolve(userList);
+
+					// if (userList.length === 0 || loading - lastLoading >= reloadTime) {
+					// 	$http.get("http://127.0.0.1:4000/")
+					// 		.success(function (response) {
+					// 			userList = response.data;
+					// 			lastLoading = new Date().getTime();
+					// 			resolve(userList);
+					// 		});
+					// } else {
+					// 	resolve(userList);
+					// }
 				});
 			},
 
