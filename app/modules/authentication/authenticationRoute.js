@@ -18,4 +18,6 @@ angular.module('authentication')
 				controller: 'AuthenticationCtrl',
 				controllerAs: 'vm'
 			});
+
+		
 	}]);

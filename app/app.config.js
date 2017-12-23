@@ -9,22 +9,18 @@
 	 * Configutation of the app
 	 */
 
-
-	angular
-		.module('gamification-client')
+	angular.module('gamification-client')
 		.config(configure)
 		.run(runBlock);
 
 	configure.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', '$mdThemingProvider'];
 
 	function configure($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider, $mdThemingProvider) {
-
 		$locationProvider.hashPrefix('!');
 
 		// This is required for Browser Sync to work poperly
 		$httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-		
 		$urlRouterProvider
 			.otherwise('/dashboard');
 		
@@ -38,6 +34,5 @@
 
 		console.log('AngularJS run() function...');
 	}
-
 
 })();

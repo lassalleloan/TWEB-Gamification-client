@@ -19,7 +19,7 @@
 		beforeEach(inject(function($controller, $rootScope, _$location_) {
 			$scope = $rootScope.$new();
 			$location = _$location_;
-			
+
 			controller = $controller('AuthenticationCtrl', {
 				$scope: $scope
 			});
@@ -33,5 +33,7 @@
 			$location.path('/authentication');
 			expect($location.path()).toBe('/authentication');
 		});
+		
 	});
+
 })();

@@ -23,6 +23,7 @@
 	 */
 
 	function SidenavCtrl($mdSidenav, $state, MenuService, $scope) {
+		
 		const vm = this;
 
 		vm.toggleSidenav = function (menuId) {
@@ -43,5 +44,7 @@
 			const page = target;
 			$state.go(page);
 		};
+
 	}
+
 })();

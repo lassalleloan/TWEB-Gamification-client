@@ -33,5 +33,7 @@
 			$location.path('/home');
 			expect($location.path()).toBe('/home');
 		});
+		
 	});
+
 })();

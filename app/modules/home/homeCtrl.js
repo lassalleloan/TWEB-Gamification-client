@@ -45,7 +45,7 @@
 						In ornare massa vel magna maximus, sed cursus diam interdum. Nunc in risus vel mauris dictum pulvinar. \
 						Morbi iaculis, nibh pretium gravida malesuada, sem nibh congue mauris, eget commodo augue odio at ex. \
 						Duis purus tortor, porttitor a interdum non, suscipit a eros. Etiam odio quam, mollis in ante sed, vestibulum fringilla nibh. \
-						Suspendisse ut placerat risus, non sollicitudin velit."
+						Suspendisse ut placerat risus, non sollicitudin velit.",
 			},
 			{
 				title: "Login", 
@@ -56,8 +56,10 @@
 						In ornare massa vel magna maximus, sed cursus diam interdum. Nunc in risus vel mauris dictum pulvinar. \
 						Morbi iaculis, nibh pretium gravida malesuada, sem nibh congue mauris, eget commodo augue odio at ex. \
 						Duis purus tortor, porttitor a interdum non, suscipit a eros. Etiam odio quam, mollis in ante sed, vestibulum fringilla nibh. \
-						Suspendisse ut placerat risus, non sollicitudin velit."
+						Suspendisse ut placerat risus, non sollicitudin velit.",
 			},
 		];
+		
 	}
+
 })();

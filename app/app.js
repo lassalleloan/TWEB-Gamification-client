@@ -23,8 +23,6 @@
 		'home',
 		'leaderboard',
 		'authentication',
-		'login',
-		'register',
 	]);
 
 })();

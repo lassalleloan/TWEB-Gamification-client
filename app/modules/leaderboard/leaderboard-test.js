@@ -33,5 +33,7 @@
 			$location.path('/leaderboard');
 			expect($location.path()).toBe('/leaderboard');
 		});
+		
 	});
+
 })();

@@ -10,49 +10,15 @@
 	 */
 
     angular.module('authentication')
-		.factory('authenticationService', authenticationService);
+		.factory('authenticationService', AuthenticationService);
 
-	authenticationService.$inject = ['$http', 'User'];
+	AuthenticationService.$inject = ['$http'];
 
-	function authenticationService($http, User) {
+	function AuthenticationService ($http) {
 
-        var service = {
-            login: login,
-            logout: logout,
-            register: register,
-            isAuthenticated: isAuthenticated,
-            getCurrentUser: getCurrentUser
-        };
-        return service;
+		return {
 
-        function login(email, password) {
-            return User
-                .login({ email: email, password: password })
-                .$promise;
-        }
-
-        function logout() {
-            return User
-                .logout()
-                .$promise;
-        }
-
-        function register(email, password) {
-            return User
-                .create({
-                    email: email,
-                    password: password
-                })
-                .$promise;
-        }
-
-        function isAuthenticated() {
-            return User.isAuthenticated();
-        }
-
-        function getCurrentUser() {
-            return User.getCurrent();
-        }
+		};
 
 	}
 

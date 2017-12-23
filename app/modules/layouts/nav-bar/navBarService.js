@@ -15,8 +15,8 @@
 	Menu.$inject = ['$http'];
 
 	function Menu ($http) {
-		
-		const menu = [
+
+		var menu = [
 			
 				{
 					link: 'leaderboard',

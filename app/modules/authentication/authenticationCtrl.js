@@ -21,9 +21,11 @@
 	 */
 
 	function Authentication(authenticationService) {
+
 		const vm = this;
 
 		vm.title = "Authentication";
+		
 	}
 
 })();

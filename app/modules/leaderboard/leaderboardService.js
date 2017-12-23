@@ -10,24 +10,26 @@
 	 */
 
     angular.module('leaderboard')
-		.factory('leaderboardService', leaderboardService);
+		.factory('leaderboardService', LeaderboardService);
 
-	leaderboardService.$inject = ['$http'];
+	LeaderboardService.$inject = ['$http'];
 
-	function leaderboardService($http) {
+	function LeaderboardService($http) {
+
 		const reloadTime = 60000;
 
 		let userList = [];
 		let lastLoading = 0;
 
 		return {
+			
 			listUser: function () {
 				return new Promise((resolve) => {
 					let loading = new Date().getTime();
 
 					if (userList.length === 0 || loading - lastLoading >= reloadTime) {
 						$http.get("https://fcctop100.herokuapp.com/api/fccusers/top/recent")
-							.then(function(response) {
+							.success(function(response) {
 								userList = response.data;
 								lastLoading = new Date().getTime();
 								resolve(userList);
@@ -37,6 +39,9 @@
 					}
 				});
 			},
+
 		};
+
 	}
+
 })();

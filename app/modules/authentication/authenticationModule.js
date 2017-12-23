@@ -9,5 +9,6 @@
 	 * Module of the app
 	 */
 
-    angular.module('authentication', []);
+  	angular.module('authentication', []);
+
 })();

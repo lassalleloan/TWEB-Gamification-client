@@ -26,5 +26,7 @@
 		vm.toggleSidenav = function (menuId) {
 			$mdSidenav(menuId).toggle();
 		};
+		
 	}
+
 })();

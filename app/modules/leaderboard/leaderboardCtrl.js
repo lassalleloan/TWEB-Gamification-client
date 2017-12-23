@@ -21,6 +21,7 @@
 	 */
 
 	function Leaderboard($scope, leaderboardService) {
+		
 		const vm = this;
 
 		vm.title = "Leaderboard";
@@ -42,5 +43,7 @@
 			return vm.sortColumn === column ? 
 				(vm.sortDescending ? 'fa-caret-up' : 'fa-caret-down') : '';
 		};
+
 	}
+
 })();
