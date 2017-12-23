@@ -38,6 +38,7 @@
 		vm.sections = [
 			{
 				title: "Description", 
+				/*jshint multistr: true */
 				text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper pulvinar ante in tempus. Etiam ultrices ultricies euismod. \
 						Fusce congue sapien lacus, non sodales sem ullamcorper eu. Vivamus rhoncus ipsum id sem pulvinar, et ullamcorper enim iaculis. \
 						Vivamus vitae arcu non tortor volutpat lacinia ac ut dui. Etiam id sodales lectus, ac eleifend nisi. \
@@ -49,6 +50,7 @@
 			},
 			{
 				title: "Login", 
+				/*jshint multistr: true */
 				text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper pulvinar ante in tempus. Etiam ultrices ultricies euismod. \
 						Fusce congue sapien lacus, non sodales sem ullamcorper eu. Vivamus rhoncus ipsum id sem pulvinar, et ullamcorper enim iaculis. \
 						Vivamus vitae arcu non tortor volutpat lacinia ac ut dui. Etiam id sodales lectus, ac eleifend nisi. \

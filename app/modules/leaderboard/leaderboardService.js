@@ -28,7 +28,7 @@
 					let loading = new Date().getTime();
 
 					// TODO: Delete after tests
-					userList = [
+					resolve([
 						{
 							username: 'Galahad',
 							recent: 34,
@@ -49,8 +49,7 @@
 							recent: 342,
 							alltime: 958,
 						}
-					];
-					resolve(userList);
+					]);
 
 					// if (userList.length === 0 || loading - lastLoading >= reloadTime) {
 					// 	$http.get("http://127.0.0.1:4000/")

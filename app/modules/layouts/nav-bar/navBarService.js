@@ -9,7 +9,7 @@
 	 * Service of the app
 	 */
 
-  	angular.module('gamification-client')
+    angular.module('gamification-client')
 		.factory('MenuService', Menu);
 
 	Menu.$inject = ['$http'];
@@ -31,10 +31,12 @@
 		];
 
 		return {
+
 			listMenu: function () {
 				return menu;
-			}
-		}
+			},
+
+		};
 
 	}
 
