@@ -17,5 +17,17 @@ angular.module('authentication')
 				templateUrl: 'app/modules/authentication/authentication.html',
 				controller: 'AuthenticationCtrl',
 				controllerAs: 'vm'
+			})
+			.state('home.register', {
+				url:'/register',
+				templateUrl: 'app/modules/authentication/register.html',
+				controller: 'AuthenticationCtrl',
+				controllerAs: 'vm'
+			})
+			.state('home.authenHome', {
+				url:'/authenHome',
+				templateUrl: 'app/modules/authentication/authenHome.html',
+				controller: 'AuthenticationCtrl',
+				controllerAs: 'vm'
 			});
 	}]);
