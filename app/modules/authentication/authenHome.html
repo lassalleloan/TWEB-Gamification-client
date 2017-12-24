@@ -4,8 +4,11 @@
             <h1>{{vm.authenHome.title}}</h1>
             <md-divider class="margin-top-20"></md-divider>
             <br><br>
-            <p>{{vm.authenHome.message}} {{vm.authenHome.username}}</p>
-            <button ng-click="vm.logout()" class="btn btn-primary">Logout</button>
+            <p>{{vm.authenHome.message}}</p>
+            <div>
+                <a href="#!/authenPassword" class="btn btn-primary">Edit Password</a>
+                <a ng-click="vm.logout()">Logout</a>
+            </div>
         </md-card-content>
     </md-card>
 </div>

@@ -33,12 +33,15 @@
 			title: 'Register',
 		};
 		vm.authenHome = {
-			title: 'Authenticated Home',
-			message: 'Welcome',
-			username: authenticationService.getCurrentUser().username,
+			title: 'Home',
+			message: 'Welcome ' + 
+				authenticationService.getCurrentUser().username,
+		};
+		vm.authenPassword = {
+			title: 'Change Password',
 		};
 
-		vm.login = function (user) {
+		vm.authenticate = function (user) {
 			authenticationService.isAuthenticated(user)
 				.then(function(isAuthenticated) {
 					if (isAuthenticated) {
@@ -56,29 +59,47 @@
 				});
 		};
 
-		vm.registerUser = function (user) {
-			authenticationService.isRegisted(user)
-			.then(function(isRegisted) {
-				if (isRegisted) {
-					$location.path('/authentication');
-				} else {
+		vm.signUp = function (user) {
+			authenticationService.isSignUp(user)
+				.then(function(isSignUp) {
+					if (isSignUp) {
+						$location.path('/authentication');
+					} else {
+						vm.authentication.message = 'Internal server error';
+						vm.authentication.messageClass = 'text-danger';
+					}
+					
+					$scope.$apply();
+				}, function() {
 					vm.authentication.message = 'Internal server error';
 					vm.authentication.messageClass = 'text-danger';
-				}
-				
-				$scope.$apply();
-			}, function() {
-				vm.authentication.message = 'Internal error';
-				vm.authentication.messageClass = 'text-danger';
-				$scope.$apply();
-			});
+					$scope.$apply();
+				});
 
-			$location.path('/authentication');
+				$location.path('/authentication');
 		};
 
 		vm.logout = function () {
 			authenticationService.logout();
 			$location.path('/authentication');
+		};
+
+		vm.setPassword = function (password) {
+			authenticationService.isSetPassword(password)
+				.then(function(isSetPassword) {
+					if (!isSetPassword) {
+						vm.authentication.message = 'Internal server error';
+						vm.authentication.messageClass = 'text-danger';
+					}
+					
+					$scope.$apply();
+				}, function() {
+					vm.authentication.message = 'Internal server error';
+					vm.authentication.messageClass = 'text-danger';
+					$scope.$apply();
+				});
+
+				vm.logout();
 		};
 
 	}

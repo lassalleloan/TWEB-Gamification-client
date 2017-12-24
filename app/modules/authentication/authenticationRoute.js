@@ -29,5 +29,11 @@ angular.module('authentication')
 				templateUrl: 'app/modules/authentication/authenHome.html',
 				controller: 'AuthenticationCtrl',
 				controllerAs: 'vm'
+			})
+			.state('home.authenPassword', {
+				url:'/authenPassword',
+				templateUrl: 'app/modules/authentication/authenPassword.html',
+				controller: 'AuthenticationCtrl',
+				controllerAs: 'vm'
 			});
 	}]);
