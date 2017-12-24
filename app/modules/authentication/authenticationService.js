@@ -12,25 +12,29 @@
     angular.module('authentication')
 		.factory('authenticationService', AuthenticationService);
 
-	AuthenticationService.$inject = ['$http'];
+	AuthenticationService.$inject = ['$http', '$location'];
 
-	function AuthenticationService ($http) {
+	function AuthenticationService ($http, $location) {
 
 		const userList = [
 			{
-				username: "AvendoBlack",
-				password: "aaaaaaaa",
+				username: 'AvendoBlack',
+				password: 'aaaaaaaa',
 			},
 		];
 
 		let isAuthenticated = false;
-		let isSignUp = false;
-		let isSetPassword = false;
+		let isSignedUp = false;
+		let isSettedPassword = false;
 		let currentUser = {};
 
 		return {
 
-			isAuthenticated: function (user) {
+			isAuthenticated: function() {
+				return isAuthenticated;
+			},
+
+			authenticate: function (user) {
 				return new Promise((resolve) => {
 					const index = userList.findIndex(u => user.username === u.username && user.password === u.password);
 					isAuthenticated = index >= 0;
@@ -48,7 +52,11 @@
 				});
 			},
 
-			isSignUp: function (user) {
+			isSignedUp: function (user) {
+				return isSignedUp;
+			},
+
+			signUp: function (user) {
 				return new Promise((resolve) => {
 					const index = userList.findIndex(u => user.username === u.username && user.password === u.password);
 
@@ -56,8 +64,26 @@
 						userList.push(user);
 					}
 
-					isSignUp = true;
-					resolve(isSignUp);
+					isSignedUp = true;
+					resolve(isSignedUp);
+
+					// $http.post('https://localhost:8080/api/register', user)
+					// 	.success(function (response) {
+					// 		resolve(response.success);
+					// 	});
+				});
+			},
+
+			isSettedPassword: function () {
+				return isSettedPassword;
+			},
+
+			setPassword: function (password) {
+				return new Promise((resolve) => {
+					currentUser.password = password;
+
+					isSettedPassword = true;
+					resolve(isSettedPassword);
 
 					// $http.post('https://localhost:8080/api/register', user)
 					// 	.success(function (response) {
@@ -72,20 +98,7 @@
 
 			logout: function () {
 				isAuthenticated = false;
-			},
-
-			isSetPassword: function (password) {
-				return new Promise((resolve) => {
-					currentUser.password = password;
-
-					isSetPassword = true;
-					resolve(isSetPassword);
-
-					// $http.post('https://localhost:8080/api/register', user)
-					// 	.success(function (response) {
-					// 		resolve(response.success);
-					// 	});
-				});
+				$location.path('/authentication');
 			},
 
 		};

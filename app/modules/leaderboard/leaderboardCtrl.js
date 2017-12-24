@@ -24,7 +24,7 @@
 		
 		const vm = this;
 
-		vm.title = "Leaderboard";
+		vm.title = 'Leaderboard';
 		vm.sortColumn = 'recent';
 		vm.sortDescending = true;
 		

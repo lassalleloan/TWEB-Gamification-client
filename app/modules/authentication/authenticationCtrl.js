@@ -42,7 +42,7 @@
 		};
 
 		vm.authenticate = function (user) {
-			authenticationService.isAuthenticated(user)
+			authenticationService.authenticate(user)
 				.then(function(isAuthenticated) {
 					if (isAuthenticated) {
 						$location.path('/authenHome');
@@ -60,9 +60,9 @@
 		};
 
 		vm.signUp = function (user) {
-			authenticationService.isSignUp(user)
-				.then(function(isSignUp) {
-					if (isSignUp) {
+			authenticationService.signUp(user)
+				.then(function(isSignedUp) {
+					if (isSignedUp) {
 						$location.path('/authentication');
 					} else {
 						vm.authentication.message = 'Internal server error';
@@ -79,15 +79,10 @@
 				$location.path('/authentication');
 		};
 
-		vm.logout = function () {
-			authenticationService.logout();
-			$location.path('/authentication');
-		};
-
 		vm.setPassword = function (password) {
-			authenticationService.isSetPassword(password)
-				.then(function(isSetPassword) {
-					if (!isSetPassword) {
+			authenticationService.setPassword(password)
+				.then(function(isSettedPassword) {
+					if (!isSettedPassword) {
 						vm.authentication.message = 'Internal server error';
 						vm.authentication.messageClass = 'text-danger';
 					}
@@ -99,7 +94,11 @@
 					$scope.$apply();
 				});
 
-				vm.logout();
+			authenticationService.logout();
+		};
+
+		vm.logout = function () {
+			authenticationService.logout();
 		};
 
 	}
