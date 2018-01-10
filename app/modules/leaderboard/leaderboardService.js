@@ -52,7 +52,7 @@
 					]);
 
 					// if (userList.length === 0 || loading - lastLoading >= reloadTime) {
-					// 	$http.get('http://127.0.0.1:4000/')
+					// 	$http.get('http://127.0.0.1:3000/scoreboard/')
 					// 		.success(function (response) {
 					// 			userList = response.data;
 					// 			lastLoading = new Date().getTime();
