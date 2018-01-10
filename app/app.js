@@ -13,8 +13,8 @@
 	angular.module('gamification-client', [
 		'ngResource',
 		'ngAria',
-		'ui.bootstrap',
-		'ngMaterial',
+		 'ui.bootstrap',
+		 'ngMaterial',
 		'ngMdIcons',
 		'ngCookies',
 		'ngAnimate',
@@ -22,7 +22,7 @@
 		'ui.router',
 		'home',
 		'leaderboard',
-		'authentication',
+		'strengthpassword',
 	]);
 
 })();

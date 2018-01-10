@@ -11,33 +11,35 @@
 
     angular.module('gamification-client')
 		.factory('MenuService', Menu);
+		// Inject your dependencies as .$inject = ['$http', 'someSevide'];
+		// function Name ($http, someSevide) {...}
 
-	Menu.$inject = ['$http'];
+		Menu.$inject = ['$http'];
 
-	function Menu ($http) {
-		
-		const menu = [
-			
-				{
-					link: 'leaderboard',
-						name: 'Leaderboard'
-				},
-			
-				{
-					link: 'authentication',
-						name: 'Authentication'
-				},
-			
-		];
+		function Menu ($http) {
 
-		return {
-			
-			listMenu: function () {
-				return menu;
-			},
+			var menu = [
+				
+					{
+						link: 'leaderboard',
+							name: 'Leaderboard'
+					},
+			    
+					{
+						link: 'strengthpassword',
+							name: 'Strength Password App'
+					},
+			    
+			];
 
-		};
+			return {
 
-	}
+				listMenu: function () {
+					return menu;
+				}
+
+			};
+
+		}
 
 })();

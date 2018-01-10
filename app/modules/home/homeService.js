@@ -12,7 +12,7 @@
 	angular.module('gamification-client')
 		.factory('homeService', HomeService);
 
-		HomeService.$inject = [];
+	HomeService.$inject = [];
 
 	function HomeService() {
 		

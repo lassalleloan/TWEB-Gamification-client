@@ -3,16 +3,16 @@
 
 	/**
 	 * @ngdoc function
-	 * @name app.controller:homeCtrl
+	 * @name app.controller:strengthpasswordCtrl
 	 * @description
-	 * # homeCtrl
+	 * # strengthpasswordCtrl
 	 * Controller of the app
 	 */
 
-	angular.module('gamification-client')
-		.controller('HomeCtrl', Home);
+	 angular.module('strengthpassword')
+		.controller('StrengthpasswordCtrl', Strengthpassword);
 
-	Home.$inject = ['homeService'];
+	Strengthpassword.$inject = ['strengthpasswordService'];
 
 	/**
 	 * recommend
@@ -20,10 +20,10 @@
 	 * and bindable members up top.
 	 */
 
-	function Home(homeService) {
+	function Strengthpassword(strengthpasswordService) {
 		const vm = this;
 
-		vm.title = 'Hello, gamification-client!';
+		vm.title = 'Strength Password App';
 		vm.summary = 'This is a template for a simple home screen website. Use it as a starting point to create something more unique.';
 		vm.authors = [
 			{
@@ -47,9 +47,11 @@
 						Morbi iaculis, nibh pretium gravida malesuada, sem nibh congue mauris, eget commodo augue odio at ex. \
 						Duis purus tortor, porttitor a interdum non, suscipit a eros. Etiam odio quam, mollis in ante sed, vestibulum fringilla nibh. \
 						Suspendisse ut placerat risus, non sollicitudin velit.',
+				link: 'https://github.com/lassalleloan/WeChat/tree/tweb-gamification-strengthpassword',
 			},
 		];
 		
 	}
 
 })();
+

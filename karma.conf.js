@@ -37,11 +37,11 @@ module.exports = function (config) {
 			'app/modules/leaderboard/leaderboardRoute.js',
 			'app/modules/leaderboard/leaderboardService.js',
 			'app/modules/leaderboard/leaderboard-test.js',
-			'app/modules/authentication/authenticationModule.js',
-			'app/modules/authentication/authenticationCtrl.js',
-			'app/modules/authentication/authenticationRoute.js',
-			'app/modules/authentication/authenticationService.js',
-			'app/modules/authentication/authentication-test.js',
+			'app/modules/strengthpassword/strengthpasswordModule.js',
+			'app/modules/strengthpassword/strengthpasswordCtrl.js',
+			'app/modules/strengthpassword/strengthpasswordRoute.js',
+			'app/modules/strengthpassword/strengthpasswordService.js',
+			'app/modules/strengthpassword/strengthpassword-test.js',
 		],
 
 		// Test results reporter to use
