@@ -22,7 +22,7 @@
 		'ui.router',
 		'home',
 		'leaderboard',
-		'strengthpassword',
+		'passwordmeter',
 	]);
 
 })();

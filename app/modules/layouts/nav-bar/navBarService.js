@@ -9,7 +9,8 @@
 	 * Service of the app
 	 */
 
-    angular.module('gamification-client')
+  	angular
+		.module('gamification-client')
 		.factory('MenuService', Menu);
 		// Inject your dependencies as .$inject = ['$http', 'someSevide'];
 		// function Name ($http, someSevide) {...}
@@ -26,19 +27,17 @@
 					},
 			    
 					{
-						link: 'strengthpassword',
-							name: 'Strength Password App'
+						link: 'passwordmeter',
+							name: 'Passwordmeter'
 					},
 			    
-			];
+		  	];
 
 			return {
-
 				listMenu: function () {
 					return menu;
 				}
-				
-			};
+		  	}
 
 		}
 

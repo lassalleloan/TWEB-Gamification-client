@@ -27,40 +27,18 @@
 				return new Promise((resolve) => {
 					let loading = new Date().getTime();
 
-					// TODO: Delete after tests
-					resolve([
-						{
-							username: 'Galahad',
-							recent: 34,
-							alltime: 2094,
-						},
-						{
-							username: 'AvendoBlack',
-							recent: 54,
-							alltime: 6324,
-						},
-						{
-							username: 'Grem',
-							recent: 94,
-							alltime: 1203,
-						},
-						{
-							username: 'CoolPolishGuy',
-							recent: 342,
-							alltime: 958,
-						}
-					]);
-
-					// if (userList.length === 0 || loading - lastLoading >= reloadTime) {
-					// 	$http.get('http://127.0.0.1:3000/scoreboard/')
-					// 		.success(function (response) {
-					// 			userList = response.data;
-					// 			lastLoading = new Date().getTime();
-					// 			resolve(userList);
-					// 		});
-					// } else {
-					// 	resolve(userList);
-					// }
+					if (userList.length === 0 || loading - lastLoading >= reloadTime) {
+						$http.get('https://stormy-hamlet-80891.herokuapp.com/scoreboard')
+							.then(function (response) {
+								userList = response.data;
+								lastLoading = new Date().getTime();
+								resolve(userList);
+							}, function(response) {
+								console.log('ERROR', response);	
+							});
+					} else {
+						resolve(userList);
+					}
 				});
 			},
 
