@@ -1,9 +1,9 @@
-# TWEB-Gamification-client
+# Gamification Client
 Authors: Galahad and Avend0Black
 ---
 
 ## Client
-The client side of the project is hosted directly on github via GitHub Pages. You can consult the [website](https://lassalleloan.github.io/TWEB-Gamification-client/ "GitHub TWEB-Gamification-client").
+The client side of the project is hosted directly on github via GitHub Pages. You can consult the [website](https://lassalleloan.github.io/gamification-client/ "GitHub gamification-client").
 
 ## Server
 In the background, an server working to stock scores and provide scoreboard of users of third-party applications. The server's code is available [here](https://github.com/galahad1/TWEB-Gamification-server "GitHub TWEB-Gamification-server").
