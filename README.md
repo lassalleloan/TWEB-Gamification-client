@@ -1,4 +1,4 @@
-# Gamification Client
+# Gamification Client :: Gamification of strong password creation
 
 Authors: Galahad and Avend0Black
 ***
