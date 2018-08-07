@@ -14,5 +14,4 @@ The agent is deployed in the cloud on [Heroku](https://www.heroku.com/ "Heroku W
 The website allows you to consult a scoreboard of user. Each user can earn points by using different applications built into the infrastructure.
 Each third-party application has a way to use a gamification to generate points. There is a link for each application in the client side of gamification.
 
-
 Galahad and Avend0Black
