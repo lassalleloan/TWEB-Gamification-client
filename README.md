@@ -1,6 +1,7 @@
 # Gamification Client
+
 Authors: Galahad and Avend0Black
----
+***
 
 ## Client
 The client side of the project is hosted directly on github via GitHub Pages. You can consult the [website](https://lassalleloan.github.io/gamification-client/ "GitHub gamification-client").
